@@ -1,11 +1,10 @@
 puts "Hello, how old are you?"
 
-voting_age = 18
-age = gets.chomp
+age = gets.chomp.to_i
 
-if age.to_i < voting_age
+if age < 18
  puts "Sorry, you are not old enough to vote yet!"
-elsif age.to_i >= 18 && age.to_i <= 19
+elsif age >= 18 && age <= 19
  puts "You are a teenage voter!"
 else
  puts "Yes, you are old enough to vote!"

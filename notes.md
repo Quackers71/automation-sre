@@ -28,3 +28,17 @@ Hello, World!
 - https://www.tutorialspoint.com/ruby/ruby_installation_unix.htm
 - sudo apt install -y ruby
 
+
+#### chomp explained
+
+chomp is the method to remove trailing new line character i.e. '\n' from the the string. whenever "gets" is use to take i/p from user it appends new line character i.e.'\n' in the end of the string.So to remove '\n' from the string 'chomp' is used.
+
+str = "Hello ruby\n"
+str = str.chomp
+puts str
+
+o/p
+"Hello ruby"
+
+taken from https://stackoverflow.com/questions/23193813/how-to-use-gets-and-gets-chomp-in-ruby
+
