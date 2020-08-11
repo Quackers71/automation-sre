@@ -42,3 +42,10 @@ o/p
 
 taken from https://stackoverflow.com/questions/23193813/how-to-use-gets-and-gets-chomp-in-ruby
 
+#### OOH Ruby
+- In an object oriented language like Ruby, real-world concepts are represented by classes.
+- Instances of classes are called objects.
+- Objects are organized by inheritance.
+- Objects can have attributes which are used to store information about them.
+- You can make objects do work by calling their methods using dot notation.
+
