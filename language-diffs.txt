@@ -1,0 +1,15 @@
+# Ruby:
+10.times do
+  puts "Hello, World!"
+end
+
+# Bash
+for i in {1..10};
+do
+  echo Hello, World!
+done
+
+# Powershell:
+for ($i=1; $i -le 10; Si++) {
+    Write-Host "Hello, World!"
+}
