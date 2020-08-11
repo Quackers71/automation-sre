@@ -8,3 +8,19 @@
 
 #### Ruby
 
+robq@robq-VirtualBox:~/repos/automation-sre$ irb
+irb(main):001:0> puts "Hello, World!"
+Hello, World!
+=> nil
+irb(main):002:0> print "Hello, World!"
+Hello, World!=> nil
+irb(main):003:0> 5.times { print"Hello, World!" }
+Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!=> 5
+irb(main):004:0> 5.times { puts"Hello, World!" }
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+=> 5
+
