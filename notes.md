@@ -49,3 +49,6 @@ taken from https://stackoverflow.com/questions/23193813/how-to-use-gets-and-gets
 - Objects can have attributes which are used to store information about them.
 - You can make objects do work by calling their methods using dot notation.
 
+#### Methods
+- Parenthesis should be used when there are either parameters to wrap in a Method Declaration, or when there are arguments to wrap in a Method Call.
+
