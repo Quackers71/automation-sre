@@ -1,8 +1,11 @@
-# calculate_intercept = [[2] * [0] + [1]]
-# to work on!
+class Calculation
+    def calc(x, b, m)
+        return m * x + b
+    end
+end
 
-y_intercept_1 = calculate_intercept(1, 2, 10)
-puts "The y intercept of the line is: #{y_intercept_1}"
+y_intercept_1 = Calculation.new
+puts "The y intercept of the line is: #{y_intercept_1.calc(1, 2, 10)}"
 
-y_intercept_2 = calculate_intercept(35, 3, 4)
-puts "The y intercept of the line is: #{y_intercept_2}"
+y_intercept_2 = Calculation.new
+puts "The y intercept of the line is: #{y_intercept_2.calc(35, 3, 4)}"
