@@ -24,3 +24,7 @@ Hello, World!
 Hello, World!
 => 5
 
+- https://www.tutorialspoint.com/ruby/index.htm
+- https://www.tutorialspoint.com/ruby/ruby_installation_unix.htm
+- sudo apt install -y ruby
+
