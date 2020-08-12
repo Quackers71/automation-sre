@@ -52,3 +52,6 @@ taken from https://stackoverflow.com/questions/23193813/how-to-use-gets-and-gets
 #### Methods
 - Parenthesis should be used when there are either parameters to wrap in a Method Declaration, or when there are arguments to wrap in a Method Call.
 
+#### require, load & include Methods
+- Code imported with the load Method will be reprocessed each time load is used, while the require Method keeps track of what it has imported and makes sure it's done only once.
+
