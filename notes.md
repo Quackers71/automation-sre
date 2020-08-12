@@ -58,3 +58,6 @@ taken from https://stackoverflow.com/questions/23193813/how-to-use-gets-and-gets
 #### Modules (are Not Classes)
 - You can't create instances of a Module
 - Mixin - used for Module functionality into Classes
+
+#### Library
+- A collection of code, likely organized into multiple modules, that can be reused by any program that imports it.
