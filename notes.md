@@ -83,3 +83,15 @@ net2.rb(main):004:0> p = Net::Ping::External.new("127.0.0.1")
 net2.rb(main):005:0> puts p.ping?
 true
 => nil
+
+#### Finding Ruby Gem Packages
+$ gem list
+$ gem list --remote
+
+$ gem query --remote --name-matches net-ping
+*** REMOTE GEMS ***
+net-ping (2.0.8, 1.7.6 universal-mingw32, 1.6.1 x86-mingw32, 1.3.2 x86-mswin32-60)
+
+# or you can use
+$ gem list --remote | grep net-ping
+net-ping (2.0.8, 1.7.6 universal-mingw32, 1.6.1 x86-mingw32, 1.3.2 x86-mswin32-60)
