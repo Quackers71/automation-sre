@@ -61,3 +61,25 @@ taken from https://stackoverflow.com/questions/23193813/how-to-use-gets-and-gets
 
 #### Library
 - A collection of code, likely organized into multiple modules, that can be reused by any program that imports it.
+
+#### Using gem to install net-ping
+robq@robq-VirtualBox:~/repos/automation-sre$ sudo gem install net-ping
+[sudo] password for robq: 
+Fetching net-ping-2.0.8.gem
+Successfully installed net-ping-2.0.8
+Parsing documentation for net-ping-2.0.8
+Installing ri documentation for net-ping-2.0.8
+Done installing documentation for net-ping after 0 seconds
+1 gem installed
+
+- Output from irb net2.rb
+robq@robq-VirtualBox:~/repos/automation-sre$ irb net2.rb 
+net2.rb(main):001:0> require "net/ping"
+=> true
+net2.rb(main):002:0> 
+net2.rb(main):003:0> # Ping the loopback address and print the result
+=> nil
+net2.rb(main):004:0> p = Net::Ping::External.new("127.0.0.1")
+net2.rb(main):005:0> puts p.ping?
+true
+=> nil
