@@ -55,3 +55,5 @@ taken from https://stackoverflow.com/questions/23193813/how-to-use-gets-and-gets
 #### require, load & include Methods
 - Code imported with the load Method will be reprocessed each time load is used, while the require Method keeps track of what it has imported and makes sure it's done only once.
 
+#### Modules (are Not Classes)
+- You can't create instances of a Module
