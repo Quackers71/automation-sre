@@ -103,3 +103,18 @@ net-ping (2.0.8, 1.7.6 universal-mingw32, 1.6.1 x86-mingw32, 1.3.2 x86-mswin32-6
 - Mode - A Mode is, kind of like a file permission, which governs what you can do with the file you've just opened
 - Entries - This method will return an array, each element of which will be a file or subdirectory within the current directory
 - Exists? - Can be used for all kinds of things, like verifying a log file is present before trying to write to it, or checking that a given file hasn't been created yet so you don't overwrite it.
+
+#### I/O Streams
+- The basic mechanism for performing input and output operations in Ruby Scripts
+- STDIN - Standard In (Stream)
+- STDOUT - Standard Out
+- STDERR - Standard Error
+- Examples:
+$ ruby stdout_example.rb > newfile.txt # write to nf.txt
+$ ruby stdout_example.rb >> newfile.txt # append to nf.txt
+$ ruby text_processor.rb < sometext.txt # using STDIN which the .rb can perform actions on
+$ ruby buggy_program.rb 2> error_file.txt # Catch STDERR messages
+$ ruby buggy_program.rb &> all_output.txt # Catch all Output
+$ ruby buggy_program.rb >> all_output.txt 2>&1 # Redirecting I/O Streams to other Streams
+  The '&' is used to state redirecting to another stream not a file
+
