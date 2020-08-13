@@ -102,3 +102,4 @@ net-ping (2.0.8, 1.7.6 universal-mingw32, 1.6.1 x86-mingw32, 1.3.2 x86-mswin32-6
 - You back bypass this by using File.open as Ruby will auto close the file.
 - Mode - A Mode is, kind of like a file permission, which governs what you can do with the file you've just opened
 - Entries - This method will return an array, each element of which will be a file or subdirectory within the current directory
+- Exists? - Can be used for all kinds of things, like verifying a log file is present before trying to write to it, or checking that a given file hasn't been created yet so you don't overwrite it.
