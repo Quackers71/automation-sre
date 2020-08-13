@@ -101,4 +101,4 @@ net-ping (2.0.8, 1.7.6 universal-mingw32, 1.6.1 x86-mingw32, 1.3.2 x86-mswin32-6
 - Race conditions - This will occur when multiple processes try to modify and read one resource at the same time.
 - You back bypass this by using File.open as Ruby will auto close the file.
 - Mode - A Mode is, kind of like a file permission, which governs what you can do with the file you've just opened
-- up to 2:15:45
+- Entries - This method will return an array, each element of which will be a file or subdirectory within the current directory
