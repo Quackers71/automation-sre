@@ -118,3 +118,33 @@ $ ruby buggy_program.rb &> all_output.txt # Catch all Output
 $ ruby buggy_program.rb >> all_output.txt 2>&1 # Redirecting I/O Streams to other Streams
   The '&' is used to state redirecting to another stream not a file
 
+Further Example's:
+$ grep "####" notes.md |sort|uniq -c|sort -n
+      1 #### chomp explained
+      1 #### File.new
+      1 #### Finding Ruby Gem Packages
+      1 #### I/O Streams
+      1 #### Library
+      1 #### Methods
+      1 #### Modules (are Not Classes)
+      1 #### OOH Ruby
+      1 #### require, load & include Methods
+      1 #### Ruby
+      1 #### Using gem to install net-ping
+
+$ cat haiku.txt 
+ruby is super
+automating everything
+maiking life easy
+
+$ cat haiku.txt | ruby capitalizer.rb 
+Ruby is super
+Automating everything
+Maiking life easy
+
+Or you could use:
+
+$ ruby capitalizer.rb < haiku.txt 
+Ruby is super
+Automating everything
+Maiking life easy
