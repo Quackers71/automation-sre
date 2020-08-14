@@ -202,3 +202,13 @@ $ ruby yikes3.rb
 sh: 1: lazy: not found
 continuing on our merry way...
 
+#### Open3 Module
+- Using Open3.capture3("", "")
+badscript.rb Example:
+
+$ ruby badscript.rb 
+
+ls: invalid option -- 'z'
+Try 'ls --help' for more information.
+false
+
