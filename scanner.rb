@@ -19,10 +19,6 @@ def write_to_file(active_ips)
     end
 end
 
-range = calculate_network_range("192.168.1.10", "255.255.255.254")
-#puts range
-
+range = calculate_network_range("192.168.1.10", "255.255.255.0")
 active_ips = scan_range(range)
-#puts active_ips
-
 write_to_file(active_ips)
