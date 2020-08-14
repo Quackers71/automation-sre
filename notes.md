@@ -212,3 +212,11 @@ ls: invalid option -- 'z'
 Try 'ls --help' for more information.
 false
 
+- Any change to the system or the external commands your scripts utilize is an opportunity for breakage, which can sometimes be subtle and hard to detect.
+- For more complex or long running tasks your probably beter using Libraries, Modules or Gems, Ruby provides...
+
+Subprocesses Summary
+- If you want to run a system command and only need to know whether or not it succeeded, use the system Method.
+- If you want to quickly run a command and capture its standard output, use backticks -- as long as you're ok with the script failing if the command doesn't succeed.
+- If you need to capture both standard output, standard error, and the return status, import the open3 module and us the capture3 Method.
+
