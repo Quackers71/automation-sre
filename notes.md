@@ -8,7 +8,7 @@
 
 #### Ruby
 
-robq@robq-VirtualBox:~/repos/automation-sre$ irb
+$ irb
 irb(main):001:0> puts "Hello, World!"
 Hello, World!
 => nil
@@ -63,7 +63,7 @@ taken from https://stackoverflow.com/questions/23193813/how-to-use-gets-and-gets
 - A collection of code, likely organized into multiple modules, that can be reused by any program that imports it.
 
 #### Using gem to install net-ping
-robq@robq-VirtualBox:~/repos/automation-sre$ sudo gem install net-ping
+$ sudo gem install net-ping
 [sudo] password for robq: 
 Fetching net-ping-2.0.8.gem
 Successfully installed net-ping-2.0.8
@@ -73,7 +73,7 @@ Done installing documentation for net-ping after 0 seconds
 1 gem installed
 
 - Output from irb net2.rb
-robq@robq-VirtualBox:~/repos/automation-sre$ irb net2.rb 
+$ irb net2.rb 
 net2.rb(main):001:0> require "net/ping"
 => true
 net2.rb(main):002:0> 
@@ -150,3 +150,55 @@ Automating everything
 Maiking life easy
 
 #### Scripting Subprocesses
+- Examples
+
+$ ruby yikes.rb 
+Traceback (most recent call last):
+	1: from yikes.rb:2:in `<main>'
+yikes.rb:2:in ``': No such file or directory - lazy (Errno::ENOENT)
+$ ruby yikes2.rb 
+
+continuing on our merry way...
+$ irb yikes.rb 
+yikes.rb(main):001:0> # using back ticks ``
+=> nil
+yikes.rb(main):002:0> output = `lazy`
+Traceback (most recent call last):
+        5: from /usr/bin/irb:23:in `<main>'
+        4: from /usr/bin/irb:23:in `load'
+        3: from /usr/lib/ruby/gems/2.7.0/gems/irb-1.2.1/exe/irb:11:in `<top (required)>'
+        2: from yikes.rb:2
+        1: from yikes.rb:2:in ``'
+Errno::ENOENT (No such file or directory - lazy)
+yikes.rb(main):003:0> 
+yikes.rb(main):004:0> puts output
+
+=> nil
+yikes.rb(main):005:0> puts "continuing on our merry way..."
+continuing on our merry way...
+=> nil
+$ irb yikes2.rb 
+yikes2.rb(main):001:0> # using the system method
+=> nil
+yikes2.rb(main):002:0> output = system("lazy")
+yikes2.rb(main):003:0> 
+yikes2.rb(main):004:0> puts output
+
+=> nil
+yikes2.rb(main):005:0> puts "continuing on our merry way..."continuing on our merry way...
+=> nil
+
+$ irb yikes3.rb 
+yikes3.rb(main):001:0> # using Redirect STDERR to STDOUT
+=> nil
+yikes3.rb(main):002:0> output = `lazy 2>&1`
+yikes3.rb(main):003:0> 
+yikes3.rb(main):004:0> puts output
+sh: 1: lazy: not found
+=> nil
+yikes3.rb(main):005:0> puts "continuing on our merry way..."continuing on our merry way...
+=> nil
+$ ruby yikes3.rb 
+sh: 1: lazy: not found
+continuing on our merry way...
+
