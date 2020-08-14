@@ -220,3 +220,6 @@ Subprocesses Summary
 - If you want to quickly run a command and capture its standard output, use backticks -- as long as you're ok with the script failing if the command doesn't succeed.
 - If you need to capture both standard output, standard error, and the return status, import the open3 module and us the capture3 Method.
 
+#### Writing a Script from the Ground Up
+- Install net-ping using:
+$ sudo gem install net-ping
