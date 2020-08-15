@@ -223,3 +223,40 @@ Subprocesses Summary
 #### Writing a Script from the Ground Up
 - Install net-ping using:
 $ sudo gem install net-ping
+
+#### String manipulation in Ruby
+- Examples:
+$ irb
+irb(main):001:0> m = /(abc).*(123).*/i.match("abcdefg1234567")
+irb(main):002:0> puts m.captures.inspect
+["abc", "123"]
+=> nil
+irb(main):009:0> m.regexp
+=> /(abc).*(123).*/i
+
+irb(main):003:0> n = /Ruby/.match("Scripting with Ruby!")
+irb(main):005:0> puts n.string
+Scripting with Ruby!
+=> nil
+
+irb(main):014:0> input = gets
+Hello?
+irb(main):015:0> puts input.length
+7
+=> nil
+irb(main):016:0> input.dump
+=> "\"Hello?\\n\""
+irb(main):017:0> chomped_input = input.chomp
+irb(main):018:0> puts chomped_input
+Hello?
+=> nil
+irb(main):019:0> puts chomped_input.length
+6
+=> nil
+irb(main):020:0> puts chomped_input.dump
+"Hello?"
+=> nil
+irb(main):021:0> /\// =~ "forward/slash"
+=> 7
+
+- String Indexing
