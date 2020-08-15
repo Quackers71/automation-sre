@@ -6,7 +6,7 @@
 - Bit Rot - The actual bits in the script don't decay, but its assumptions about the implicit signals it relies on do.
 - Create a notification method that could be anything from an email to an update on a a dashboard.  It surfaces the error so a person can actually fix the automation.
 
-#### Ruby
+### Ruby
 
 $ irb
 irb(main):001:0> puts "Hello, World!"
@@ -42,7 +42,7 @@ o/p
 
 taken from https://stackoverflow.com/questions/23193813/how-to-use-gets-and-gets-chomp-in-ruby
 
-#### OOH Ruby
+### OOH Ruby
 - In an object oriented language like Ruby, real-world concepts are represented by classes.
 - Instances of classes are called objects.
 - Objects are organized by inheritance.
@@ -220,9 +220,11 @@ Subprocesses Summary
 - If you want to quickly run a command and capture its standard output, use backticks -- as long as you're ok with the script failing if the command doesn't succeed.
 - If you need to capture both standard output, standard error, and the return status, import the open3 module and us the capture3 Method.
 
-#### Writing a Script from the Ground Up
+### Writing a Script from the Ground Up
 - Install net-ping using:
 $ sudo gem install net-ping
+
+### Regexp and Text Processing
 
 #### String manipulation in Ruby
 - Examples:
@@ -265,3 +267,13 @@ irb(main):021:0> /\// =~ "forward/slash"
 
 - Strings Summary
 - Handy Tools - Indexing, Strip and GSub
+
+#### Regular Expressions
+- Regexp
+- Regular expressions allow you to answer questions like, "What are all o the four-letter words in a file?" or "Give me all of the email addresses in a request log."
+- People who can use these are :
+  - IT Support Specialists
+  - Software Engineers
+  - Site Reliability Engineers
+  - System Administrators
+
