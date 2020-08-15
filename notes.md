@@ -260,3 +260,6 @@ irb(main):021:0> /\// =~ "forward/slash"
 => 7
 
 - String Indexing
+- \r - Indicates a carriage return, which means that the cursor should be moved to the beginning of the line.
+- \n - A newline separator indicating that the cursor should be moved to a new line.
+
