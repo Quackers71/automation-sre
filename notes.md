@@ -277,3 +277,7 @@ irb(main):021:0> /\// =~ "forward/slash"
   - Site Reliability Engineers
   - System Administrators
 
+- Regex Basics
+  - The ^ and $ specifically match the start and end of a line, not a string.  If you have a string that spans multiple lines, you can use the \A and \Z anchors to match the start and end of the whole string, not just the line.
+  - Repitition symbols include both the + character, which means "match one or more occurrences of the preceding character," and the * symbol, which means "match zero or more occurrences if the preceding character."
+
