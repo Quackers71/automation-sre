@@ -287,4 +287,25 @@ irb(main):021:0> /\// =~ "forward/slash"
     - You can also iterate through a string using regular expressions and the scan method, which accepts a regexp as an argument.
     - Split - You can use split to chop up a string into an array, using either a character or regular expression to tell Ruby where to do the splitting.
 
-- 
+- Processing Log Files
+  - Cron job - used to schedule scripts on Unix-based operating systems
+    - Output from syslog.rb
+    $ irb syslog.rb 
+      syslog.rb(main):001:0> File.open("/var/log/syslog").each do |line|
+      syslog.rb(main):002:1*         if line.include?("CRON")
+      syslog.rb(main):003:2>             m = /\((.+)\)$/.match(line)
+      syslog.rb(main):004:2>             puts m.captures
+      syslog.rb(main):005:2>         end
+      syslog.rb(main):006:1>   end
+      root) CMD (   cd / && run-parts --report /etc/cron.hourly
+      root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+      root) CMD (   cd / && run-parts --report /etc/cron.hourly
+      root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+      root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+      root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+      root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+      => #<File:/var/log/syslog>
+
+  - Hash - Remember that hashes are data structures used to store information in key=>value pairs format.  Each entry has a key with an associated value.
+
+  
