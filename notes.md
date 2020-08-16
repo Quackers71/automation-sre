@@ -290,6 +290,7 @@ irb(main):021:0> /\// =~ "forward/slash"
 - Processing Log Files
   - Cron job - used to schedule scripts on Unix-based operating systems
     - Output from syslog.rb
+  
     $ irb syslog.rb 
       syslog.rb(main):001:0> File.open("/var/log/syslog").each do |line|
       syslog.rb(main):002:1*         if line.include?("CRON")
@@ -308,4 +309,37 @@ irb(main):021:0> /\// =~ "forward/slash"
 
   - Hash - Remember that hashes are data structures used to store information in key=>value pairs format.  Each entry has a key with an associated value.
 
+- Command Line Text Processing
+  - Examples:
+    $ grep -i CRON /var/log/syslog
+    $ grep -i CRON /var/log/syslog | wc -l
+    $  grep -i CRON /var/log/syslog | grep -oE '\((.+)\)$'
+  - Along with saving scripts to a file, Ruby also offers system administrators the ability to process text from the command line itself, without having to go through the trouble of writing and saving a new script file.
+  - '-e' This flag lets you execute code you pass directly into Ruby on the command line, without the need to save it to disk first. i.e.
+    $ ruby -e 'puts "This is pretty cool!"'
+    This is pretty cool!
+    $ ruby -e 'puts 1+1'
+    2
+  -  '-n' This flag tells Ruby that we want to apply our code to each line of STDIN until there's no more.
+  - Example's:
   
+    $ cat /var/log/syslog | ruby -ne 'if $_.include?("CRON") then m = /\((.+)\)$/.match($_); puts m.captures end'
+      root) CMD (   cd / && run-parts --report /etc/cron.hourly
+      root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+      root) CMD (   cd / && run-parts --report /etc/cron.hourly
+      root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+      root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+      root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+      root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+      root) CMD (   cd / && run-parts --report /etc/cron.hourly
+      root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+      root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+      root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+      root) CMD (   cd / && run-parts --report /etc/cron.hourly
+
+    $ for i in $(cat ./story.txt); do B='echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]"'; echo -n "${B}${i:1} "; done; echo -e "\n"
+    echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]"nce echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]"pon echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]" echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]"ime, echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]"he echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]"as echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]" echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]"em echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]"f echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]" echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]"rogramming echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]"anguage echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]"alled echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]"uby. 
+
+    $ cat story.txt | ruby -ne 'puts $_.gsub(/\S+/,&:capitalize)'
+    Once Upon A Time, The Was A Gem Of A Programming Language Called Ruby.
+
