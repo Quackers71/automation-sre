@@ -343,3 +343,27 @@ irb(main):021:0> /\// =~ "forward/slash"
     $ cat story.txt | ruby -ne 'puts $_.gsub(/\S+/,&:capitalize)'
     Once Upon A Time, The Was A Gem Of A Programming Language Called Ruby.
 
+- Other Data Formats
+  - HTML - A markup format which defines the content of a webpage.
+  - JSON - A data-interchange format commonly used to pass data between computers on networks (especially the internet).
+
+- Reading CSV Files
+  - CSV "Comma-Separated Values" - CSV files are stored in plain text, and each line in a csv file generally represents a single data record.  Each field in that file is separated by a ','.
+  - The return value of the CSV read Method is an "array of arrays", which means that several inner arrays are nested inside an outer one.
+- Searching CSV Files
+  - Using the Array Class  and Find Methods
+- Modifying CSV Files
+  - The important difference between File.open and CSV.open is that with File.open, you append strings to a file.  With CSV.open, you append rows, which are represented as arrays.
+- CSV Summary
+  - It can be helpful to think of a CSV file in terms of a spreadsheet, where each line corresponds to a row, and each comma-separated field corresponds to a column.
+  - Several Gems can be installed to Parse CSV files, like fastercsv
+
+- HTML Processing
+  - HyperText Markup Language
+  - HTML data format - Describes and defines the content of a webpage
+- HTML Parsing Libraries
+  - Gems nonogiri required
+  - https://nokogiri.org/tutorials/installing_nokogiri.html
+    sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev
+    sudo gem install nokogiri
+
