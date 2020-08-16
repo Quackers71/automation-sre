@@ -283,5 +283,8 @@ irb(main):021:0> /\// =~ "forward/slash"
   - Advanced Matching
   - Character Classes - [] Allow you to match against the set of characters contained within them.
     - Ruby also offers some specialized metacharacters that behave like character classes.  These can be used as shortcuts to match specific types of text.
+  - Regexp and Str Methods
+    - You can also iterate through a string using regular expressions and the scan method, which accepts a regexp as an argument.
+    - Split - You can use split to chop up a string into an array, using either a character or regular expression to tell Ruby where to do the splitting.
 
-  
+- 
