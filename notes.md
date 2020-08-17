@@ -367,3 +367,26 @@ irb(main):021:0> /\// =~ "forward/slash"
     sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev
     sudo gem install nokogiri
 
+#### Version Control and Testing
+- Skipped through most of the Git Stuff
+- Testing starts @ 5:12:05
+  - Software Testing - The process of evaluating computer code to determine whether or not it does what you expect.
+  - Formal software testing takes this a step further, codifying tests into its own software and code that can be run to verify that your program does what you expect.
+- Test-Driven Development
+  - Writing the tests before writing the code :-o
+    - When faced with a new problem that can be solved by automation, your gut instinct might be to fire up your text editor and start writing.
+    - But, creating some tests first makes sure that you've thought through th problem you're trying to solve, and some of the different approaches you might use to accomplish it.
+    - The test-driven development cycle usually first involves writing a test, then running it to make sure it fails.
+    - Once you've verified that it fails, you write the code that will satisfy the test, and run the test again.
+    - If it passes, you can continue on to the next part of your program.
+    - If it fails, you can debug it and run the tests again.
+- Black Box vs White Box
+  - White, sometimes called Clear or Transparent Box Testing, relies on the test creator's knowledge of the software being tested to construct the test cases. 
+    White box tests are helpful because the test-writer can use their knowledge of the source code itself to create the test that cover most of the ways the program behaves.
+
+  - Black or Opaque Box Testing, the test doesn't know the internals of how the software works.
+    Black box tests are useful because they don't rely on knowledge of how the system works, which means their test cases are less likely to be biased by the code.
+
+  - If the Unit Tests are created before any code is written based on the specifications of what the code is supposed to do, they can be considered black box unit tests.
+
+  5:18:38
