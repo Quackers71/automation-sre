@@ -460,5 +460,11 @@ irb(main):021:0> /\// =~ "forward/slash"
       - Chef Configurations
         - Resources - Statements of configuration that describe the desired state of an item of configuration, like a file, software package, or even a script.
         - Resources type include, Type, Name, Properties & Actions.
-        5:53:54
-        
+        - Cookbooks - generally represent a set of configuration for a single infrastructure unit or scenario, like it's stated in the official Chef documentation.
+        - Chef Supermarket
+        - Test Kitchen - Test your recipes and cookbooks
+
+- Will have to come back to this has currently setup is a VM in VirtualBox and it requires Virtualbox - Chef & Vagrant within the running Main Host...
+
+#### Monitoring
+- 
