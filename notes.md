@@ -464,6 +464,8 @@ irb(main):021:0> /\// =~ "forward/slash"
         - Chef Supermarket
         - Test Kitchen - Test your recipes and cookbooks
 
+        - https://www.techrepublic.com/article/how-to-install-the-chef-server-and-chef-client-on-ubuntu-20-04/
+
 - Will have to come back to this has currently setup is a VM in VirtualBox and it requires Virtualbox - Chef & Vagrant within the running Main Host...
 
 #### Monitoring
