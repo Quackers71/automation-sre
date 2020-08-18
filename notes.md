@@ -381,7 +381,7 @@ irb(main):021:0> /\// =~ "forward/slash"
     - If it passes, you can continue on to the next part of your program.
     - If it fails, you can debug it and run the tests again.
 - Black Box vs White Box
-  - White, sometimes called Clear or Transparent Box Testing, relies on the test creator's knowledge of the software being tested to construct the test cases. 
+  - White, sometimes called Clear or Transparent Box Testing, relies on the test creator's knowledge of the         software being tested to construct the test cases. 
     White box tests are helpful because the test-writer can use their knowledge of the source code itself to create the test that cover most of the ways the program behaves.
 
   - Black or Opaque Box Testing, the test doesn't know the internals of how the software works.
@@ -389,4 +389,16 @@ irb(main):021:0> /\// =~ "forward/slash"
 
   - If the Unit Tests are created before any code is written based on the specifications of what the code is supposed to do, they can be considered black box unit tests.
 
-  5:18:38
+- Test Types
+  - Unit tests
+  - Integration tests
+  - Regression tests
+  - Smoke tests
+  - All the above come under the category of a Test Suite
+
+- Unit test
+  - Given a known input, does the output of the code match our expectations?
+  - test_unit1.rb - Because the scope of the test is restricted to a small, specific unit, these types of test usually run really quickly, and debugging them is simple since there's a limited number of reasons for them to fail.
+  - Besides testing that the code works in the general case, you should also see what happens when you provide it with some input you might not expect it to encounter under normal operations.
+  - Edge case - Input to our code that produce unexpected results, and are found at the extreme ends of the ranges of input we imagine our programss will typically work with.
+  
