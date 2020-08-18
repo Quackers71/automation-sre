@@ -435,3 +435,8 @@ irb(main):021:0> /\// =~ "forward/slash"
   100% passed
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------
   2116.90 tests/s, 2116.90 assertions/s
+
+- Test Summary
+  - Remember that good tests help make any automation and scripts you write more robust, resilient, and less buggy.
+  - When engineers submit their code, it's integrated into the main repository and test are automatically run against it to spot bugs and errors in a process called 'continuous integration'.
+
