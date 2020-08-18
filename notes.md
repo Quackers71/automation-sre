@@ -405,6 +405,8 @@ irb(main):021:0> /\// =~ "forward/slash"
 
 - Writing Unit Tests in Ruby
   - Install Test-unit gem
+  sudo gem install test-unit
+
   - When using the test-unit library, you've got to organize your tests into classes that inherit from the TestCase class.
   - Any methods we define in our TestDivider class will automatically become tests that can be run by the testing framework.
   - The assert_equal method basically says, "Both of my arguments are equal!"
@@ -440,3 +442,23 @@ irb(main):021:0> /\// =~ "forward/slash"
   - Remember that good tests help make any automation and scripts you write more robust, resilient, and less buggy.
   - When engineers submit their code, it's integrated into the main repository and test are automatically run against it to spot bugs and errors in a process called 'continuous integration'.
 
+#### Configuration & Automation at Scale
+- Introduction to Automation at Scale
+  - A scalable system is a flexible one.
+  - Motivation for Automation at Scale
+    - IaC - Infrastructure as Code
+  - Configuration Management
+    - CM Tool - Chef
+  - Introduction to Chef
+    - A configuration management system used to configure and manage IT infrastructure, including the bare-metal, virtual, and cloud-based varieties.
+      - recipes and cookbooks
+      - Node - Some machine managed by a Chef Server, which could be anything from a web server to a network server.
+      - Chef uses the Intent-based automation paradigm.
+      - Idempotency and Convergence
+      - Chef is built on top of Ruby, although some of the part are built with Erlang.
+      - Domain-specific language (DSL) A specialized computer language that's used for a specific purpose, like declaring resources within a Chef recipe.
+      - Chef Configurations
+        - Resources - Statements of configuration that describe the desired state of an item of configuration, like a file, software package, or even a script.
+        - Resources type include, Type, Name, Properties & Actions.
+        5:53:54
+        
