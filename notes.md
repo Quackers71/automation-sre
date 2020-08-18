@@ -402,4 +402,36 @@ irb(main):021:0> /\// =~ "forward/slash"
   - Besides testing that the code works in the general case, you should also see what happens when you provide it with some input you might not expect it to encounter under normal operations.
   - Edge case - Input to our code that produce unexpected results, and are found at the extreme ends of the ranges of input we imagine our programss will typically work with.
   - Edge case now catchered by an if statement which returns an error message
+
+- Writing Unit Tests in Ruby
+  - Install Test-unit gem
+  - When using the test-unit library, you've got to organize your tests into classes that inherit from the TestCase class.
+  - Any methods we define in our TestDivider class will automatically become tests that can be run by the testing framework.
+  - The assert_equal method basically says, "Both of my arguments are equal!"
+  Output:
+
+  $ ruby test_divider.rb 
+  Loaded suite test_divider
+  Started
+  .
+  Finished in 0.000832713 seconds.
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1 tests, 1 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
+  100% passed
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1200.89 tests/s, 1200.89 assertions/s
+
+  - This means that the normal execution of the program is stopped, and the program will likely crash.  These errors are referred to as runtime exceptions, because they happen when the script is run.
   
+  Update Output with the test_divide_by_0 function:
+
+  $ ruby test_divider.rb 
+  Loaded suite test_divider
+  Started
+  ..
+  Finished in 0.000944777 seconds.
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  2 tests, 2 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
+  100% passed
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  2116.90 tests/s, 2116.90 assertions/s
