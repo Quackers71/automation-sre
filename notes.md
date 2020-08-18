@@ -401,4 +401,5 @@ irb(main):021:0> /\// =~ "forward/slash"
   - test_unit1.rb - Because the scope of the test is restricted to a small, specific unit, these types of test usually run really quickly, and debugging them is simple since there's a limited number of reasons for them to fail.
   - Besides testing that the code works in the general case, you should also see what happens when you provide it with some input you might not expect it to encounter under normal operations.
   - Edge case - Input to our code that produce unexpected results, and are found at the extreme ends of the ranges of input we imagine our programss will typically work with.
+  - Edge case now catchered by an if statement which returns an error message
   
